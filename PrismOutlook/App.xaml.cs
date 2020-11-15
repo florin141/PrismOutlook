@@ -2,6 +2,10 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
+using Infragistics.Windows.OutlookBar;
+using Infragistics.Windows.Ribbon;
+using Prism.Regions;
+using PrismOutlook.Core;
 using PrismOutlook.Modules.Mail;
 
 namespace PrismOutlook
@@ -24,6 +28,14 @@ namespace PrismOutlook
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
 	        moduleCatalog.AddModule<MailModule>();
+        }
+
+        protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
+        {
+            base.ConfigureRegionAdapterMappings(regionAdapterMappings);
+
+            regionAdapterMappings.RegisterMapping(typeof(XamOutlookBar), Container.Resolve<XamOutlookBarRegionAdapter>());
+            regionAdapterMappings.RegisterMapping(typeof(XamRibbon), Container.Resolve<XamRibbonRegionAdapter>());
         }
     }
 }

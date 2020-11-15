@@ -64,6 +64,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\XamOutlookBarRegionAdapter.cs" />
+    <Compile Include="Core\XamRibbonRegionAdapter.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -94,11 +96,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Fluent.Ribbon">
-      <Version>8.0.1</Version>
+    <PackageReference Include="Infragistics.WPF.OutlookBar">
+      <Version>20.1.9</Version>
     </PackageReference>
-    <PackageReference Include="MaterialDesignThemes">
-      <Version>3.2.0</Version>
+    <PackageReference Include="Infragistics.WPF.Ribbon">
+      <Version>20.1.9</Version>
+    </PackageReference>
+    <PackageReference Include="Infragistics.WPF.Themes.Office2013">
+      <Version>20.1.9</Version>
     </PackageReference>
     <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
   </ItemGroup>
@@ -112,5 +117,6 @@
       <Name>PrismOutlook.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
