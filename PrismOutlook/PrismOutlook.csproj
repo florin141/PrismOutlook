@@ -108,6 +108,14 @@
     <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modules\PrismOutlook.Modules.Calendar\PrismOutlook.Modules.Calendar.csproj">
+      <Project>{78af0a0d-6f43-4c92-91b4-a6d488319cd8}</Project>
+      <Name>PrismOutlook.Modules.Calendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismOutlook.Modules.Contacts\PrismOutlook.Modules.Contacts.csproj">
+      <Project>{ffd7b220-cef3-4bb8-8796-c2fb642f9eef}</Project>
+      <Name>PrismOutlook.Modules.Contacts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\PrismOutlook.Modules.Mail\PrismOutlook.Modules.Mail.csproj">
       <Project>{72C7181B-550F-48F6-9CDE-5E1AA4113DAC}</Project>
       <Name>PrismOutlook.Modules.Mail</Name>

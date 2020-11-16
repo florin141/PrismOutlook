@@ -6,6 +6,7 @@ using Infragistics.Windows.OutlookBar;
 using Infragistics.Windows.Ribbon;
 using Prism.Regions;
 using PrismOutlook.Core;
+using PrismOutlook.Modules.Contacts;
 using PrismOutlook.Modules.Mail;
 
 namespace PrismOutlook
@@ -28,6 +29,7 @@ namespace PrismOutlook
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
 	        moduleCatalog.AddModule<MailModule>();
+	        moduleCatalog.AddModule<ContactsModule>();
         }
 
         protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
