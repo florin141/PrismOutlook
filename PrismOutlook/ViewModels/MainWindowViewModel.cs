@@ -31,9 +31,10 @@ namespace PrismOutlook.ViewModels
             _regionManager.RequestNavigate(RegionNames.ContentRegion, navigationPath);
         }
 
-        public MainWindowViewModel(IRegionManager regionManager)
+        public MainWindowViewModel(IRegionManager regionManager, IApplicationCommands applicationCommands)
         {
             _regionManager = regionManager;
+            applicationCommands.NavigateCommand.RegisterCommand(NavigateCommand);
         }
     }
 }
