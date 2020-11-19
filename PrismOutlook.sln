@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1259
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismOutlook", "PrismOutlook\PrismOutlook.csproj", "{88F97866-5725-446B-BE62-DF5F19913BA4}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismOutlook.Modules.Calendar", "Modules\PrismOutlook.Modules.Calendar\PrismOutlook.Modules.Calendar.csproj", "{78AF0A0D-6F43-4C92-91B4-A6D488319CD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismOutlook.Core", "PrismOutlook.Core\PrismOutlook.Core.csproj", "{765B532A-9E9C-445F-B1A7-CB81F4A80979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismOutlook.Business", "PrismOutlook.Business\PrismOutlook.Business.csproj", "{28AC9F84-E717-44AE-B6E3-B08619AC2ED0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{765B532A-9E9C-445F-B1A7-CB81F4A80979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{765B532A-9E9C-445F-B1A7-CB81F4A80979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{765B532A-9E9C-445F-B1A7-CB81F4A80979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AC9F84-E717-44AE-B6E3-B08619AC2ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AC9F84-E717-44AE-B6E3-B08619AC2ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AC9F84-E717-44AE-B6E3-B08619AC2ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AC9F84-E717-44AE-B6E3-B08619AC2ED0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
