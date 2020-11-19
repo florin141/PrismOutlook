@@ -1,9 +1,15 @@
-﻿using Prism.Mvvm;
+﻿using System;
+using Prism.Commands;
+using Prism.Mvvm;
+using Prism.Regions;
+using PrismOutlook.Core;
 
 namespace PrismOutlook.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
+        private readonly IRegionManager _regionManager;
+
         private string _title = "Prism Application";
         public string Title
         {
@@ -11,9 +17,23 @@ namespace PrismOutlook.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public MainWindowViewModel()
-        {
+        private DelegateCommand<string> _navigateCommand;
+        public DelegateCommand<string> NavigateCommand =>
+            _navigateCommand ?? (_navigateCommand = new DelegateCommand<string>(ExecuteNavigateCommand));
 
+        void ExecuteNavigateCommand(string navigationPath)
+        {
+            if (string.IsNullOrEmpty(navigationPath))
+            {
+                throw new ArgumentNullException();
+            }
+
+            _regionManager.RequestNavigate(RegionNames.ContentRegion, navigationPath);
+        }
+
+        public MainWindowViewModel(IRegionManager regionManager)
+        {
+            _regionManager = regionManager;
         }
     }
 }

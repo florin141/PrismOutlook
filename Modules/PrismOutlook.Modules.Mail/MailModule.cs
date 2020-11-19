@@ -1,5 +1,4 @@
-﻿using PrismOutlook.Modules.Mail.Views;
-using Prism.Ioc;
+﻿using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 using PrismOutlook.Core;
@@ -18,8 +17,6 @@ namespace PrismOutlook.Modules.Mail
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-	        _regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, typeof(ViewA));
-
 	        _regionManager.RegisterViewWithRegion(RegionNames.RibbonRegion, typeof(HomeTab));
 	        _regionManager.RegisterViewWithRegion(RegionNames.OutlookGroupRegion, typeof(MailGroup));
         }
