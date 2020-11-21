@@ -1,12 +1,11 @@
 ﻿using System;
 using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Regions;
 using PrismOutlook.Core;
 
 namespace PrismOutlook.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class MainWindowViewModel : ViewModelBase
     {
         private readonly IRegionManager _regionManager;
 
