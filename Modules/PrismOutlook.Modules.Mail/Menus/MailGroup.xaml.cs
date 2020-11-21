@@ -1,4 +1,6 @@
-﻿using Infragistics.Windows.OutlookBar;
+﻿using Infragistics.Controls.Menus;
+using Infragistics.Windows.OutlookBar;
+using PrismOutlook.Business;
 using PrismOutlook.Core;
 
 namespace PrismOutlook.Modules.Mail.Menus
@@ -13,6 +15,17 @@ namespace PrismOutlook.Modules.Mail.Menus
             InitializeComponent();
         }
 
-        public string DefaultNavigationPath => "MailList";
+        public string DefaultNavigationPath
+        {
+            get
+            {
+                if (_dataTree.SelectionSettings.SelectedNodes[0] is XamDataTreeNode item)
+                {
+                    return ((NavigationItem) item.Data).NavigationPath;
+                }
+
+                return "MailList";
+            }
+        }
     }
 }

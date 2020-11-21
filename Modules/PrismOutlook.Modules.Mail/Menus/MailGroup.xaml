@@ -10,7 +10,8 @@
     prism:ViewModelLocator.AutoWireViewModel="True"
     Header="Mail">
     <Grid>
-        <ig:XamDataTree ItemsSource="{Binding Items}">
+        <ig:XamDataTree x:Name="_dataTree"
+            ItemsSource="{Binding Items}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="ActiveNodeChanged">
                     <prism:InvokeCommandAction
